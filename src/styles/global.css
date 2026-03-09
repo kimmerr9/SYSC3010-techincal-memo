@@ -3,6 +3,8 @@
 @theme {
     --color-off-white: #fefefe;
     --color-off-black: #2e2e2e;
+
+    --shadow-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 * {
@@ -10,15 +12,22 @@
     font-family: "Montserrat";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     margin: 0;
+    background-color: var(--color-off-white);
+    color: var(--color-off-black)
 }
 
 code {
     background: #e4e4e7;
     font-family: monospace;
     font-weight: bolder;
+    font-size: 14px;
     padding: 0 5px;
     border-radius: 4px;
 }
@@ -26,8 +35,14 @@ code {
 ol {
     list-style: decimal;
     padding-left: 24px;
+    margin-bottom: 10px;
 }
 
+h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
 
 h2 {
     font-size: 1.8em;
