@@ -1,0 +1,31 @@
+---
+const LINKS = [
+    'introduction', // why KiCad
+    'installing KiCad',
+    'setting up a developer environment', // what do all the different file types mean,
+    'editing a schematic',
+    'editing a PCB layout',
+    'running design rule check',
+    'expoerting gerbers',
+    'custom schematics and footprints'
+]
+---
+<!-- <nav>
+    <ul>
+        {LINKS.map((link) => (
+            <li><a class="cursor-pointer">{link}</a></li>
+        ))}
+    </ul>
+</nav> -->
+
+<nav>
+  <ul class="flex flex-col gap-3 text-sm leading-tight">
+    <li><a href="#introduction" class="block rounded-lg px-3 py-2 hover:bg-zinc-200 transition">Introduction</a></li>
+    <li><a href="#installing-kicad" class="block rounded-lg px-3 py-2 hover:bg-zinc-200 transition">Installing KiCad</a></li>
+    <li><a href="#developer-environment" class="block rounded-lg px-3 py-2 hover:bg-zinc-200 transition">Setting up a developer environment</a></li>
+    <li><a href="#editing-schematic" class="block rounded-lg px-3 py-2 hover:bg-zinc-200 transition">Editing a schematic</a></li>
+    <li><a href="#pcb-layout" class="block rounded-lg px-3 py-2 hover:bg-zinc-200 transition">Editing a PCB layout</a></li>
+    <li><a href="#drc" class="block rounded-lg px-3 py-2 hover:bg-zinc-200 transition">Running design rule check</a></li>
+    <li><a href="#gerbers" class="block rounded-lg px-3 py-2 hover:bg-zinc-200 transition">Exporting gerbers</a></li>
+  </ul>
+</nav>

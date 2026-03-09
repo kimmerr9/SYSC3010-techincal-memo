@@ -1,0 +1,30 @@
+---
+import Navigation from "../components/Navigation.astro"
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<title>Documen</title>
+</head>
+<body>
+	<section class="mx-10 my-4  text-2xl font-bold">
+		<h1>Beginners Guide to KiCad</h1>
+		<h2>Justin Kim's &ndash; Technical Memo</h2>
+	</section>
+	<section class="mx-10 flex items-start justify-center gap-5">
+		<aside class="sticky top-8 rounded-2xl p-3 shadow-sm border border-zinc-200">
+			<Navigation />
+		</aside>
+		<main class="flex-1 text-off-black">
+			<slot />
+		</main>
+	</section>
+</body>
+</html>

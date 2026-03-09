@@ -1,0 +1,100 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+
+
+const code = "file  New Project"
+---
+
+<!-- 
+Topic is introduced and clearly motivated (why is new tech useful/interesting/important?)
+
+Technology is described in sufficient detail to permit the reader to implement or leverage this new tech.	
+	
+Writing or spoken language quality (spelling, grammar, writing style).
+	
+Overall presentation (use of figures, tables, illustrations, etc.
+-->
+<Layout>
+    <!-- intro -->
+    <section>
+        <h2>Introduction</h2>
+        <h3>What is KiCad?</h3>
+        <p>KiCad is an <b>Electronic Design Automation (EDA) software suite</b> used to design electronic circuits and printed circuit boards (PBCs). EDA tools provide software environment engineers use to create, and verify electronic designs before they are manufactured. The software essentially creates a simulated design environment where circuits can be developed and analyzed before committing to production</p>
+        <h3>Why KiCad Specifically?</h3>
+        <p>KiCad is one of the best <b>free, open-source, and accessible to beginners.</b> Unlike many commerical EDA tools, KiCad does not require expensive licenses, making it an excellent choise for students, hobbyiest and professional engineers alike.</p>
+        <p>Another advatnage of KiCad is its <b>large commmunity of contributors.</b> Because the software is open-source, developers continously improve it resulting in an abundance of learning resources and pre-existing component libraries. Addtionally, KiCad is available on all main stream operating systems including <b>Windows, Mac and Linux</b></p>
+        <p>In this tutorial, you will build a simple resitor + LED circuit to learn the basic workflow for designing a PCB using KiCad. By the end, you will understand how to create a project, design a schematic, build a PCB layout and generate the files required for manufacturing.</p>
+    </section>
+
+    <!-- install kicad -->
+    <section>
+        <h2>Installing KiCad</h2>
+
+        <p>Installing KiCad is straight-forward.</p>
+        <ol>
+            <li>First visit the <a class="cursor-pointer underline">official KiCad website downloads page</a>. Make sure to select the installer that matches your system architrecture. Most modern systems require the 64-bit pattern.</li>
+            <li>Download and run the installer keeping the default settings, which are recommended for beginners.</li>
+            <li>Once the installation is complete, launch KiCad</li>
+        </ol>
+        <p>After opening KiCad, you will see the <b>Project Manager</b>, which is the main interface used to manage your projects.</p>
+    </section>
+
+    <!-- setting up dev env -->
+    <section>
+        <h2>Setting Up a Developer Environment</h2>
+        <p>Now that KiCad is installed, you can create and name your first project under <code>File &rarr; New Project</code>. It is recommended to have a KiCad workspace directory for all of your projects. Once the project is created, you will see three new files in your project folder.</p>
+        <!-- Project Manager -->
+        <ol>
+            <li><code>.kicad_pro</code> being the main project file.</li>
+            <li><code>.kicad_sch</code> and <code>.kicad_pcb</code> for the schematic and PCB desing file. These files work together to define the electrical and physical aspects of your PCB</li>
+        </ol>
+        <p>After confirming your project has created successfully, double clicking on the <code>.kicad_sch</code> file will open the KiCad Schematic Editor.</p>
+    </section>
+
+    <!-- editing a schematic -->
+    <section>
+
+        <h2>Editing a Schematic File</h2>
+
+        <h3>Understanding the Layout</h3>
+        <p>Before creating the physical layout of the PCB, the electrical design must first be defined in a <b>schematic diagram.</b> The schematic describes how each component connects electrically rather than their physical placement on the board. You can view the schematic by double clicking the <code>.kicad_sch</code> file to open the KiCad Schematic Editor.</p>
+        <!-- Schematic View -->
+        <p>Components are represented using <b>symbols</b> while the electrical connections between them are known as <b>nets</b>. Each symbol must be associated with a <b>footprint</b> which determines how the component will appear on the physical PCB later in the design process. Once the schematic is complete and verified, it servers as a foundation when transferred to the PCB editor for creating the layout.</p>
+
+        <h3>Sheet Setup</h3>
+        <p>This information helps organize documentation and is commonly included in engineering deliverables.</p>
+        <ol>
+            <li>Open <b>Page Settings</b> under <code>File</code></li>
+            <li>Fill in the <b>Title Block</b>. It is recommended to at least configure the <b>project name, author and revision</b></li>
+        </ol>
+
+        <h3>Adding and Wiring Components</h3>
+        <p>KiCad libraries are included with the installer and contain a wide range of commonly used components. In many cases, these built-in symbols can be used instead of importing custom ones, as long as the associated footprint matches the physical component being used.</p>
+        <ol>
+            <li>Select the <b>Add Symbol</b> tool</li>
+            <li>Search for the component in the <b>symbol library</b></li>
+            <li>Place the symbol on the schematic</li>
+        </ol>
+        <p>This list of components are used to form the circuit in the IMAGE. Note that the <code>5v+</code> and <code>GND</code> symbolos are found in the <b>Power Symbol Library</b></p>
+
+        <p>Once the components are placed, connecting them with wires is pretty easy.</p>
+        <ol>
+            <li>Select the <b>Wire</b> tool</li>
+            <li>Connect the pins of components to form the <b>electrical nets</b></li>
+        </ol>
+        <p>This process assisgns the physical relations to each component so that KiCad can later place them on the PCB layout without having to redefine all the connections.</p>
+        
+        <h3></h3>
+    </section>
+
+    <!-- editing a PCB -->
+    <section>
+        <h2>Editing the PCB Layout</h2>
+        <p>AFter the schematic is complete, the next step </p>
+    </section>
+
+
+
+    
+</Layout>
