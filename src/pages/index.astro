@@ -34,11 +34,11 @@ Overall presentation (use of figures, tables, illustrations, etc.
     <section id="intro">
         <h2>Introduction</h2>
         <h3>What is KiCad?</h3>
-        <p>KiCad is an <b>Electronic Design Automation (EDA) software suite</b> used to design electronic circuits and printed circuit boards (PBCs). EDA tools provide software environment engineers use to create, and verify electronic designs before they are manufactured. The software essentially creates a simulated design environment where circuits can be developed and analyzed before committing to production</p>
+        <p>KiCad is an <b>Electronic Design Automation (EDA) software suite</b> used to design electronic circuits and printed circuit boards (PCBs). EDA tools provide software environment engineers use to create, and verify electronic designs before they are manufactured. The software essentially creates a simulated design environment where circuits can be developed and analyzed before committing to production</p>
         <h3>Why KiCad Specifically?</h3>
-        <p>KiCad is one of the best <b>free, open-source, and accessible to beginners.</b> Unlike many commerical EDA tools, KiCad does not require expensive licenses, making it an excellent choise for students, hobbyiest and professional engineers alike Another advatnage of KiCad is its <b>large commmunity of contributors.</b> Because the software is open-source, developers continously improve it resulting in an abundance of learning resources and pre-existing component libraries. Addtionally, KiCad is available on all main stream operating systems including <b>Windows, Mac and Linux</b></p>
+        <p>KiCad is one of the best <b>free, open-source, and accessible to beginners.</b> Unlike many commercial EDA tools, KiCad does not require expensive licenses, making it an excellent choice for students, hobbyiest and professional engineers alike Another advantage of KiCad is its <b>large community of contributors.</b> Because the software is open-source, developers continuously improve it resulting in an abundance of learning resources and pre-existing component libraries. Additionally, KiCad is available on all main stream operating systems including <b>Windows, Mac and Linux</b></p>
         <p>Learning to design a PCB can significantly improve the quality of a project. While breadboards and jumper wires are useful for early prototyping, they can become unreliable and difficult to manage as a systems grows more complex. A PCB provides a <b>compact, organized and durable way</b> to integrate components and microcontrollers.</p>
-        <p>In this tutorial, you will build a simple resitor + LED circuit to learn the basic workflow for designing a PCB using KiCad. By the end, you will understand how to create a project, design a schematic, build a PCB layout and generate the files required for manufacturing.</p>
+        <p>In this tutorial, you will build a simple resistor + LED circuit to learn the basic workflow for designing a PCB using KiCad. By the end, you will understand how to create a project, design a schematic, build a PCB layout and generate the files required for manufacturing.</p>
     </section>
 
     <!-- install kicad -->
@@ -47,7 +47,7 @@ Overall presentation (use of figures, tables, illustrations, etc.
 
         <p>Installing KiCad is straight-forward.</p>
         <ol>
-            <li>First visit the <a class="cursor-pointer underline" href="https://www.kicad.org/download/">official KiCad website downloads page</a>. Make sure to select the installer that matches your system architrecture. Most modern systems require the 64-bit pattern.</li>
+            <li>First visit the <a class="cursor-pointer underline" href="https://www.kicad.org/download/">official KiCad website downloads page</a>. Make sure to select the installer that matches your system architecture. Most modern systems require the 64-bit pattern.</li>
             <li>Download and run the installer keeping the default settings, which are recommended for beginners.</li>
             <li>Once the installation is complete, launch KiCad</li>
         </ol>
@@ -61,7 +61,7 @@ Overall presentation (use of figures, tables, illustrations, etc.
         <!-- Project Manager -->
         <ol>
             <li><code>.kicad_pro</code> being the main project file.</li>
-            <li><code>.kicad_sch</code> and <code>.kicad_pcb</code> for the schematic and PCB desing file. These files work together to define the electrical and physical aspects of your PCB</li>
+            <li><code>.kicad_sch</code> and <code>.kicad_pcb</code> for the schematic and PCB design file. These files work together to define the electrical and physical aspects of your PCB</li>
         </ol>
         <ImgContainer src={project_manager.src} />
         <p>After confirming your project has created successfully, double clicking on the <code>.kicad_sch</code> file will open the KiCad Schematic Editor.</p>
@@ -97,10 +97,10 @@ Overall presentation (use of figures, tables, illustrations, etc.
         <ol>
             <li>In the <b>Device</b> library, search for a resistor value <code>R</code>, and LED value <code>LED</code></li>
             <li>After placing your components on the schematic you will see another numbered value appearing on the schematic which is the <b>Reference Number.</b> It is important you verify that all you references are in order before moving to the PCB Editor because KiCad will use them when transferring data to the <code>.kicad_pcb</code> file. </li>
-            <li>A simple way to verify that all reference numbers are correct using the <b>Annotate Schematic</b> tool which will automatically assign references to components. For this example, we can skil this stpe since we are only working with three components</li> 
+            <li>A simple way to verify that all reference numbers are correct using the <b>Annotate Schematic</b> tool which will automatically assign references to components. For this example, we can skip this step since we are only working with three components</li> 
             <li>Now place the <b>Raspberry Pi Pico</b> found in the <b>MCU_Module</b> library. (Using an RPi2 would be a little overkill for this demo. The Pico includes a USB connecter and regulator allowing us to focus explicitly on the LED circuit)</li>
         </ol>
-        <p>Note that the <code>GND</code> symbolos are found in <b>KiCad's Power Symbol Library.</b></p>
+        <p>Note that the <code>GND</code> symbols are found in <b>KiCad's Power Symbol Library.</b></p>
         <ImgContainer src={sch_symbols.src} />
         <p>Once the components are placed, we need to assign values and footprints to the components. Although KiCad will function without assigning any values, specifying them now saves time later when generating the <b>Bill of Materials</b> for manufacturing. (More on BOM later) Right click a component and select <code>Properties</code>. Here you can assign it's value and footprint. </p>
         <ImgContainer src={symbol_properties.src} />
@@ -115,7 +115,7 @@ Overall presentation (use of figures, tables, illustrations, etc.
             <li>Select the <b>Wire</b> tool</li>
             <li>Connect the pins of components to form the <b>electrical nets</b></li>
         </ol>
-        <p>This process assisgns the physical relations to each component so that KiCad can later place them on the PCB layout without having to redefine all the connections.</p>
+        <p>This process assigns the physical relations to each component so that KiCad can later place them on the PCB layout without having to redefine all the connections.</p>
     </section>
 
     <!-- editing a PCB -->
@@ -141,7 +141,7 @@ Overall presentation (use of figures, tables, illustrations, etc.
         <p><b>You must ensure the Design Constraints match the capabilities of the PCB manufacturer. Setting these rules early prevents design errors.</b></p>
 
         <h3>Formatting the PCB</h3>
-        <p>Begin by selecting <b>Update PCB from Schematic</b> to import the logic over to the PCB. You should see litte <b>ratsnets lines</b> which represent unrouted connections that need to be traced.</p>
+        <p>Begin by selecting <b>Update PCB from Schematic</b> to import the logic over to the PCB. You should see little <b>ratsnets lines</b> which represent unrouted connections that need to be traced.</p>
         <ImgContainer src={PCB_view.src}/>
         To trace connections:
         <ol>
@@ -151,7 +151,7 @@ Overall presentation (use of figures, tables, illustrations, etc.
         </ol>
         <p>After completing the traces to all connections, define the board edges by choosing <code>Edge.Cuts</code> under <b>Appearance</b> and selecting <b>Draw Rectangle</b></p>
         <ImgContainer src={PCB_edge.src} />
-        <p>Prevewing the PCB to ensure that the board layout appears as expected. Select <code>View &rarr; 3D Viewer</code></p>
+        <p>Previewing the PCB to ensure that the board layout appears as expected. Select <code>View &rarr; 3D Viewer</code></p>
         <ImgContainer src={PCB_preview.src} />
         <p>Run the <b>Design Rules Checker</b> to be sure we are not violating any major rules before exporting our production files.</p>
     </section>
@@ -163,7 +163,7 @@ Overall presentation (use of figures, tables, illustrations, etc.
         <ImgContainer src={Exporting.src} />
         <ol>
             <li>Select <code>File &rarr; Plot</code></li>
-            <li>Select the output directory for your files. It is recommeneded to create a seperate folder from your design files.</li>
+            <li>Select the output directory for your files. It is recommended to create a separate folder from your design files.</li>
             <li>The only layers to include are the front and back <b>copper layers</b> <code>F/B.Cu</code>, the front and back <b>silkscreen layers</b> <code>F/B.Silkscreen</code>, the front and back <b>mask layers</b> <code>F/B.Mask</code> and finally the <b>edge cuts layer</b> <code>Edge.cuts</code></li>
             <li>Select <code>Plot</code></li>
             <li>Next select <code>Generate Drill Files &rarr; Generate</code></li>
@@ -179,6 +179,6 @@ Overall presentation (use of figures, tables, illustrations, etc.
     <!-- end note -->
     <section id="end" class="mb-10">
         <h2>End Note</h2>
-        This tutorials skips over how to create custom symbols and footprints. Student's utilizing components that are not "main stream" will have to view additional resources in order to learn. I highly recommend students consult the <a href="https://docs.kicad.org/9.0/en/getting_started_in_kicad/getting_started_in_kicad.html" class="underline">Official Getting Started with KiCad Documentation</a> when facing diffculties.  
+        This tutorials skips over how to create custom symbols and footprints. Student's utilizing components that are not "main stream" will have to view additional resources in order to learn. I highly recommend students consult the <a href="https://docs.kicad.org/9.0/en/getting_started_in_kicad/getting_started_in_kicad.html" class="underline">Official Getting Started with KiCad Documentation</a> when facing difficulties.  
     </section>
 </Layout>
