@@ -13,9 +13,9 @@ const LINKS = [
 const { props } = Astro.props
 ---
 <nav> 
-    <ul class="flex flex-col gap-3 text-sm leading-tight">
+    <ul class="flex flex-col gap-3 leading-tight">
         {LINKS.map((link) => (
-            <li><a href={`#${link.id}`} class="cursor-pointer block rounded-lg px-3 py-2 hover:bg-zinc-200 transition">{link.text}</a></li>
+            <li><a href={`#${link.id}`} class="text-base cursor-pointer block rounded-lg px-3 py-2 hover:bg-zinc-200 transition">{link.text}</a></li>
         ))}
     </ul>
 </nav>

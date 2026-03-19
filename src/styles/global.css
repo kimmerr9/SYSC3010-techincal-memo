@@ -36,16 +36,21 @@ ol {
     list-style: decimal;
     padding-left: 24px;
     margin-bottom: 10px;
+    font-size: 1.1em
+}
+
+ul {
+    font-size: 1.1em
 }
 
 h1 {
-    font-size: 1.8em;
+    font-size: 2.4em;
     font-weight: bold;
     letter-spacing: 1.4px;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 2.1em;
     font-weight: bold;
     letter-spacing: 1.4px;
 
@@ -53,7 +58,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size: 1.7em;
     font-weight: bold;
     letter-spacing: 1.4px;
 
@@ -63,4 +68,17 @@ h3 {
 p {
     letter-spacing: 0.05em;
     padding-bottom: 10px;
+    font-size: 1.1em;
+}
+
+p > a  {
+    color: rgb(43, 43, 255);
+}
+
+ol > li > a {
+    color: rgb(43, 43, 255);  
+}
+
+.ref-class > li > a {
+    color: rgb(43, 43, 255);
 }
